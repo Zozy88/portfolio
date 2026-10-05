@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio of Azhaar Khalil Salafi - Web Developer & Designer" />
+    <meta name="author" content="Azhaar Khalil Salafi" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+    <title>Azhaar Khalil Salafi | Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+
+    <style>
+      /* أزرار تغيير اللغة والثيم */
+      .lang-switcher {
+        text-align: center;
+        padding: 15px 0 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .lang-btn, .theme-toggle-btn {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: all 0.3s ease;
+      }
+      .lang-btn:hover, .theme-toggle-btn:hover {
+        background: #fff;
+        color: #a43f49;
+      }
+
+      /* خطوط فاصلة القائمة الجانبية */
+      .main-menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+      }
+      .main-menu li:last-child {
+        border-bottom: none !important;
+      }
+
+      /* اتجاه اللغة العربية RTL */
+      html[dir="rtl"] body {
+        text-align: right;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      
+      html[dir="rtl"] .responsive-nav #menu {
+        left: auto !important;
+        right: 0 !important;
+      }
+
+      html[dir="rtl"] #page-wraper {
+        padding-left: 0 !important;
+        padding-right: 20% !important;
+      }
+
+      html[dir="rtl"] .section-heading h2 {
+        text-align: right;
+      }
+
+      html[dir="rtl"] .section-heading .line-dec {
+        margin: 20px 0 20px auto;
+      }
+
+      @media screen and (max-width: 1200px) {
+        html[dir="rtl"] #page-wraper {
+          padding-right: 0 !important;
+        }
+      }
+
+      /* الوضع الفاتح */
+      body.light-theme,
+      body.light-theme #page-wraper {
+        background-color: #ffffff !important;
+        background-image: none !important;
+      }
+
+      body.light-theme #page-wraper::before {
+        display: none !important;
+      }
+
+      body.light-theme .responsive-nav #menu {
+        background-color: #dcedc8 !important;
+        background-image: none !important;
+        border-right: 1px solid #c5e1a5 !important;
+      }
+
+      body.light-theme .responsive-nav #menu .author-content h4,
+      body.light-theme .responsive-nav #menu .author-content span,
+      body.light-theme .responsive-nav #menu .main-menu li a,
+      body.light-theme .responsive-nav #menu .copyright-text p {
+        color: #1b5e20 !important;
+        font-weight: 600 !important;
+      }
+
+      body.light-theme .responsive-nav #menu .main-menu li.active a,
+      body.light-theme .responsive-nav #menu .main-menu li a:hover {
+        background-color: #c5e1a5 !important;
+        color: #004d40 !important;
+      }
+
+      body.light-theme .responsive-nav #menu .main-menu li {
+        border-bottom: 1px solid #c5e1a5 !important;
+      }
+
+      body.light-theme .lang-btn, 
+      body.light-theme .theme-toggle-btn {
+        background: #ffffff !important;
+        color: #1b5e20 !important;
+        border: 1px solid #aed581 !important;
+      }
+
+      body.light-theme .section,
+      body.light-theme .service-item,
+      body.light-theme .left-image-post,
+      body.light-theme .right-image-post {
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      body.light-theme h1, body.light-theme h2, 
+      body.light-theme h3, body.light-theme h4, 
+      body.light-theme h5, body.light-theme h6,
+      body.light-theme p, body.light-theme li,
+      body.light-theme span, body.light-theme label,
+      body.light-theme a,
+      body.light-theme .right-text p,
+      body.light-theme .service-item p,
+      body.light-theme .service-item ul li,
+      body.light-theme .section-heading span,
+      body.light-theme .section-heading h2 {
+        color: #111111 !important;
+        font-weight: 600 !important;
+        text-shadow: none !important;
+      }
+
+      body.light-theme .section-heading h2,
+      body.light-theme .service-item h4 {
+        color: #1b5e20 !important;
+        font-weight: 700 !important;
+      }
+
+      body.light-theme .section-heading .line-dec {
+        background-color: #1b5e20 !important;
+      }
+
+      body.light-theme .white-button a,
+      body.light-theme button.button {
+        background-color: #2e7d32 !important;
+        color: #ffffff !important;
+        font-weight: bold !important;
+        border: none !important;
+        border-radius: 6px !important;
+      }
+
+      body.light-theme .white-button a:hover,
+      body.light-theme button.button:hover {
+        background-color: #1b5e20 !important;
+      }
+
+      /* نافذة الصور المنبثقة */
+      .lightbox-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            
+            <div class="lang-switcher">
+              <button class="lang-btn" onclick="toggleLanguage()">العربية / English</button>
+              <button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" data-en="☀️ Light" data-ar="☀️ فاتح">☀️ Light</button>
+            </div>
+
+            <div class="image">
+              <a href="#"><img src="assets/images/author-image.jpg" alt="Azhaar Khalil Salafi" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Azhaar Khalil Salafi</h4>
+              <span data-en="Web Developer & Designer" data-ar="مطورة ومصممة ويب">Web Developer &amp; Designer</span>
+            </div>
+            <div class="social-network" style="margin-bottom: 20px;">
+  <ul class="soial-icons">
+    <!-- رابط GitHub -->
+    <li><a href="https://github.com/Zozy88" target="_blank"><i class="fa fa-github"></i></a></li>
+    
+    <!-- رابط Instagram -->
+    <li><a href="https://instagram.com/atl.88" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    
+    <!-- رابط Snapchat (بدلاً من تويتر) -->
+<!-- خيار 2: باستخدام إيموجي السناب مباشرة -->
+<li><a href="https://www.snapchat.com/add/zozsalfi" target="_blank" style="text-decoration: none; font-size: 16px;">👻</a></li>
+
+<!-- البريد الإلكتروني -->
+    <li><a href="mailto:azhaarkhs@gmail.com"><i class="fa fa-envelope"></i></a></li>
+  </ul>
+</div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1" data-en="About Me" data-ar="عنّي">About Me</a></li>
+                <li><a href="#section2" data-en="What I’m good at" data-ar="مهاراتي">What I’m good at</a></li>
+                <li><a href="#section3" data-en="Projects" data-ar="مشاريعي">Projects</a></li>
+                <li><a href="#section4" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a></li>
+              </ul>
+            </nav>
+            
+            <div class="copyright-text">
+              <p>Copyright 2026 Azhaar Salafi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1: About Me -->
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="left-image-post">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/left-image.jpg" alt="Web Development" style="border-radius: 10px; width: 100%;" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4 data-en="About Me" data-ar="عنّي">About Me</h4>
+                  <p data-en="I am a Web Developer & Designer holding a Diploma in Programming and Web Development Technology from the College of Technology. I focus on building modern user interfaces and responsive web applications that run efficiently across all devices." data-ar="أنا مطورة ومصممة ويب حاصلة على دبلوم تقنية برمجة وتطوير الويب من الكلية التقنية. أركز على بناء واجهات مستخدم حديثة وتطبيقات ويب متجاوبة تعمل بكفاءة على جميع الأجهزة.">
+                    I am a Web Developer & Designer holding a Diploma in Programming and Web Development Technology from the College of Technology. I focus on building modern user interfaces and responsive web applications that run efficiently across all devices.
+                  </p>
+                  <p data-en="Throughout my studies, I gained hands-on experience in coding and UI design, and I am continuously seeking to refine my skills and develop digital projects that leave a real-world impact." data-ar="خلال دراستي، اكتسبت خبرة عملية في البرمجة وتصميم الواجهات، وأسعى باستمرار لتطوير مهاراتي وبناء مشاريع رقمية ذات أثر حقيقي.">
+                    Throughout my studies, I gained hands-on experience in coding and UI design, and I am continuously seeking to refine my skills and develop digital projects that leave a real-world impact.
+                  </p>
+                  <p data-en="Looking ahead, my goal is to work as a professional Full-Stack Web Developer in a leading technology company, where I can contribute to innovative digital products, build seamless user experiences, and advance my career in software engineering." data-ar="تطلعاً للمستقبل، أطمح للعمل كمطورة ويب متكاملة (Full-Stack Web Developer) في إحدى الشركات التقنية الرائدة، حيث يمكنني المساهمة في تطوير منتجات رقمية مبتكرة، وبناء تجارب مستخدم ممتازة، والارتقاء بمسيرتي المهنية في مجال هندسة البرمجيات.">
+                    Looking ahead, my goal is to work as a professional Full-Stack Web Developer in a leading technology company, where I can contribute to innovative digital products, build seamless user experiences, and advance my career in software engineering.
+                  </p>
+                  <div class="white-button" style="margin-top: 20px;">
+                    <a href="assets/Resume.pdf" target="_blank" data-en="Get Resume / CV" data-ar="تحميل السيرة الذاتية">Get Resume / CV</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Skills -->
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2 data-en="What I’m good at?" data-ar="ما هي مهاراتي؟">What I’m good at?</h2>
+            <div class="line-dec"></div>
+            <span data-en="Here are the core technical skills and practical services I offer:" data-ar="إليك أبرز المهارات التقنية والخدمات التي أقدمها:">Here are the core technical skills and practical services I offer:</span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4 data-en="Web Development" data-ar="تطوير الويب">Web Development</h4>
+                <p data-en="Building clean, responsive, and structured websites using HTML5, CSS3, JavaScript, and modern coding standards." data-ar="بناء مواقع متجاوبة ومنظمة باستخدام HTML5 و CSS3 و JavaScript وفق أحدث المعايير البرمجية.">
+                  Building clean, responsive, and structured websites using HTML5, CSS3, JavaScript, and modern coding standards.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4 data-en="UI / UX Design" data-ar="تصميم الواجهات UI/UX">UI / UX Design</h4>
+                <p data-en="Designing interactive, aesthetic layouts and user-friendly interfaces tailored for seamless user experiences." data-ar="تصميم واجهات تفاعلية وجذابة تضمن أفضل تجربة استخدام للمستخدم.">
+                  Designing interactive, aesthetic layouts and user-friendly interfaces tailored for seamless user experiences.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4 data-en="Problem Solving" data-ar="حل المشكلات التقنية">Problem Solving</h4>
+                <p data-en="Applying practical hands-on technical skills from my diploma studies to debug, optimize, and fix web applications." data-ar="تطبيق المهارات البرمجية والتحليلية لاكتشاف الأخطاء البرمجية وإصلاحها وتحسين أداء المواقع.">
+                  Applying practical hands-on technical skills from my diploma studies to debug, optimize, and fix web applications.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4 data-en="Database Management" data-ar="إدارة قواعد البيانات">Database Management</h4>
+                <p data-en="Understanding database structures and connecting back-end data smoothly with modern front-end interfaces." data-ar="فهم هيكلة قواعد البيانات وربط البيانات مع الواجهات الأمامية بسلاسة.">
+                  Understanding database structures and connecting back-end data smoothly with modern front-end interfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Projects -->
+      <section class="section my-services" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2 data-en="Projects" data-ar="مشاريعي">Projects</h2>
+            <div class="line-dec"></div>
+            <span data-en="A showcase of recent web development and design projects I have built:" data-ar="استعراض لأبرز المشاريع التي قمت بتطويرها وتصميمها مؤخراً:">A showcase of recent web development and design projects I have built:</span>
+          </div>
+          <div class="row">
+
+            <!-- مشروع 1: متجر عطور رواق -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4 style="cursor: pointer; text-decoration: underline;" 
+                    onclick="openRawaqGallery(0)" 
+                    data-en="Rawaq Perfumes Store 🖼️ (Click to view)" 
+                    data-ar="متجر عطور رواق 🖼️ (اضغط لعرض الصور)">
+                  Rawaq Perfumes Store 🖼️ (Click to view)
+                </h4>
+
+                <p data-en="A luxury online perfume store built with HTML5, CSS3, and PHP." 
+                   data-ar="متجر إلكتروني فاخر لبيع العطور تم بناؤه باستخدام HTML5 و CSS3 و PHP.">
+                  A luxury online perfume store built with HTML5, CSS3, and PHP.
+                </p>
+
+                <ul style="text-align: inherit; font-size: 13px; margin-top: 10px; padding-left: 18px; padding-right: 18px; line-height: 1.8;">
+                  <li data-en="Frontend: HTML5 • CSS3 • JavaScript • Responsive Layout" 
+                      data-ar="الواجهات الأمامية: HTML5 • CSS3 • JavaScript • تصميم متجاوب">
+                    Frontend: HTML5 • CSS3 • JavaScript • Responsive Layout
+                  </li>
+                  <li data-en="Backend & DB: PHP • MySQL (Products & user accounts management)" 
+                      data-ar="الخلفية وقواعد البيانات: PHP • MySQL (إدارة المنتجات وحسابات المستخدمين)">
+                    Backend & DB: PHP • MySQL (Products & user accounts management)
+                  </li>
+                  <li data-en="Developer: Azhaar Khalil Salafi" 
+                      data-ar="إعداد وتطوير: أزهار خليل سلفي">
+                    Developer: Azhaar Khalil Salafi
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- نافذة عرض الصور المشتركة (Lightbox Modal) -->
+            <div id="rawaqLightbox" class="lightbox-modal">
+              <span onclick="closeRawaqGallery()" style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; user-select: none;">&times;</span>
+              <span onclick="changeRawaqImage(-1)" style="position: absolute; left: 20px; top: 50%; color: #fff; font-size: 35px; cursor: pointer; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 50%; user-select: none;">&#10094;</span>
+              <img id="rawaqImg" src="" alt="صورة المشروع" style="max-width: 85%; max-height: 80vh; border-radius: 8px; box-shadow: 0 0 15px rgba(255,255,255,0.2);">
+              <span onclick="changeRawaqImage(1)" style="position: absolute; right: 20px; top: 50%; color: #fff; font-size: 35px; cursor: pointer; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 50%; user-select: none;">&#10095;</span>
+            </div>
+
+            <!-- مشروع 2: معصم الحاج -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4 style="cursor: pointer; text-decoration: underline;" 
+                    onclick="openHajjGallery(0)"
+                    data-en="Hajj Smart Wristband System 🖼️ (Click to view)" 
+                    data-ar="نظام معصم الحاج - الإسوارة الذكية 🖼️ (اضغط لعرض الصور)">
+                  Hajj Smart Wristband System 🖼️ (Click to view)
+                </h4>
+                
+                <p data-en="An integrated IoT and mobile solution designed to enhance pilgrim safety. Features an unopenable smart wristband synced with a mobile app for instant medical data retrieval via NFC/QR Code and real-time location tracking." 
+                   data-ar="حل تقني متكامل يجمع بين الإنترنت من الأشياء (IoT) وتطبيقات الجوال لتعزيز سلامة الحجاج. يربط الإسوارة الذكية بتطبيق جوال للاستجابة السريعة واسترجاع البيانات الطبية والموقع عبر تقنيات NFC و QR Code.">
+                  An integrated IoT and mobile solution designed to enhance pilgrim safety. Features an unopenable smart wristband synced with a mobile app for instant medical data retrieval via NFC/QR Code and real-time location tracking.
+                </p>
+
+                <ul style="text-align: inherit; font-size: 13px; margin-top: 15px; padding-left: 18px; padding-right: 18px; line-height: 1.8;">
+                  <li data-en="Frontend: HTML5 • CSS3 • JavaScript • Flutter / React Native" data-ar="واجهة التطبيق واللوحة: HTML5 • CSS3 • JavaScript • Flutter / React Native">Frontend: HTML5 • CSS3 • JavaScript • Flutter / React Native</li>
+                  <li data-en="Backend & DB: PHP • MySQL (Medical records & pilgrim data)" data-ar="الأنظمة وقواعد البيانات: PHP • MySQL (لإدارة بيانات الحجاج والسجلات الطبية)">Backend & DB: PHP • MySQL (Medical records & pilgrim data)</li>
+                  <li data-en="IoT & Mobile Tech: NFC Reading • QR Scanner • GPS Tracking APIs" data-ar="التقنيات والمستشعرات: NFC Reading • QR Scanner • GPS Tracking APIs">IoT & Mobile Tech: NFC Reading • QR Scanner • GPS Tracking APIs</li>
+                  <li data-en="Goal & Value: Enhancing pilgrim safety and supporting Vision 2030 digital transformation." data-ar="الهدف والقيمة: حماية بيانات الحجاج، تقليل حالات الفقدان، ودعم التحول الرقمي وفق رؤية 2030.">Goal & Value: Enhancing pilgrim safety and supporting Vision 2030 digital transformation.</li>
+                  <li data-en="Team: Azhaar Khalil Salafi" data-ar="فريق العمل الجماعي: أزهار خليل سلفي">Team: Azhaar Khalil Salafi</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- مشروع 3: الطاولة الذكية (محدث ليدعم عرض الصور) -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4 style="cursor: pointer; text-decoration: underline;" 
+                    onclick="openTableGallery(0)"
+                    data-en="Smart Table System 🖼️ (Click to view)" 
+                    data-ar="نظام الطاولة الذكية 🖼️ (اضغط لعرض الصور)">
+                  Smart Table System 🖼️ (Click to view)
+                </h4>
+                
+                <p data-en="An interactive smart table system designed for modern restaurants and cafes. It enables customers to browse menus, place orders, and pay digitally via embedded touch screens, integrated with a central management system." 
+                   data-ar="نظام تفاعلي مبتكر للمطاعم والمقاهي الحديثة يتيح للعملاء استعراض قائمة الطعام، تقديم الطلبات، والدفع الإلكتروني المباشر عبر شاشات مدمجة بالطاولة، مع ربطه بنظام إدارة مركزي للمطبخ والمبيعات.">
+                  An interactive smart table system designed for modern restaurants and cafes. It enables customers to browse menus, place orders, and pay digitally via embedded touch screens, integrated with a central management system.
+                </p>
+
+                <ul style="text-align: inherit; font-size: 13px; margin-top: 15px; padding-left: 18px; padding-right: 18px; line-height: 1.8;">
+                  <li data-en="Frontend: HTML5 • CSS3 • JavaScript • Bootstrap" data-ar="واجهات التفاعل: HTML5 • CSS3 • JavaScript • Bootstrap">Frontend: HTML5 • CSS3 • JavaScript • Bootstrap</li>
+                  <li data-en="Backend & DB: PHP • MySQL (Menu management, order processing, and invoicing)" data-ar="معالجة الطلبات وقواعد البيانات: PHP • MySQL (لتحديث قائمة الطعام واستلام الطلبات)">Backend & DB: PHP • MySQL (Menu management, order processing, and invoicing)</li>
+                  <li data-en="Smart Features: Interactive Touch Menu • QR Code Ordering • Digital Payment Gateways" data-ar="التقنيات والمزايا الذكية: Interactive Touch Menu • QR Code Ordering • Digital Payment Gateways">Smart Features: Interactive Touch Menu • QR Code Ordering • Digital Payment Gateways</li>
+                  <li data-en="Goal & Value: Speed up customer service, reduce order errors, and offer a premium experience." data-ar="الهدف والقيمة: تسريع خدمة العملاء، تقليل أخطاء الطلبات، وتقديم تجربة رقمية فاخرة.">Goal & Value: Speed up customer service, reduce order errors, and offer a premium experience.</li>
+                  <li data-en="Developer: Azhaar Khalil Salafi" data-ar="إعداد وتطوير: أزهار خليل سلفي">Developer: Azhaar Khalil Salafi</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Contact -->
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2 data-en="Contact Me" data-ar="تواصل معي">Contact Me</h2>
+            <div class="line-dec"></div>
+            <span data-en="Feel free to reach out to me for project collaborations or inquiries." data-ar="يسعدني تواصلك معي لأي استفسارات أو مشاريع مشتركة.">Feel free to reach out to me for project collaborations or inquiries.</span>
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="" />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="" />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="" />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Script to Handle Language Toggle & Single Theme Toggle -->
+    <script>
+      var currentLang = "en";
+      var isLightTheme = false;
+
+      function updateThemeButtonText() {
+        var themeBtn = document.getElementById("themeBtn");
+        if (isLightTheme) {
+          themeBtn.setAttribute("data-en", "🌙 Dark");
+          themeBtn.setAttribute("data-ar", "🌙 داكن");
+          themeBtn.textContent = currentLang === "ar" ? "🌙 داكن" : "🌙 Dark";
+        } else {
+          themeBtn.setAttribute("data-en", "☀️ Light");
+          themeBtn.setAttribute("data-ar", "☀️ فاتح");
+          themeBtn.textContent = currentLang === "ar" ? "☀️ فاتح" : "☀️ Light";
+        }
+      }
+
+      function toggleLanguage() {
+        var htmlTag = document.documentElement;
+        var elements = document.querySelectorAll("[data-en][data-ar]");
+
+        if (currentLang === "en") {
+          currentLang = "ar";
+          htmlTag.setAttribute("dir", "rtl");
+          htmlTag.setAttribute("lang", "ar");
+
+          elements.forEach(function(el) {
+            el.textContent = el.getAttribute("data-ar");
+          });
+
+          document.getElementById("name").placeholder = "الاسم...";
+          document.getElementById("email").placeholder = "البريد الإلكتروني...";
+          document.getElementById("subject").placeholder = "الموضوع...";
+          document.getElementById("message").placeholder = "رسالتك...";
+
+        } else {
+          currentLang = "en";
+          htmlTag.setAttribute("dir", "ltr");
+          htmlTag.setAttribute("lang", "en");
+
+          elements.forEach(function(el) {
+            el.textContent = el.getAttribute("data-en");
+          });
+
+          document.getElementById("name").placeholder = "Your name...";
+          document.getElementById("email").placeholder = "Your email...";
+          document.getElementById("subject").placeholder = "Subject...";
+          document.getElementById("message").placeholder = "Your message...";
+        }
+
+        updateThemeButtonText();
+      }
+
+      function toggleTheme() {
+        isLightTheme = !isLightTheme;
+        if (isLightTheme) {
+          document.body.classList.add('light-theme');
+        } else {
+          document.body.classList.remove('light-theme');
+        }
+        updateThemeButtonText();
+      }
+
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            { scrollTop: reqSectionPos },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+
+    <!-- Script for Lightbox Galleries (Rawaq, Hajj, & Smart Table Systems) -->
+    <script>
+      // 1. صور متجر عطور رواق
+      const rawaqImages = [
+        "assets/images/rawaq1.png",
+        "assets/images/rawaq2.png",
+        "assets/images/rawaq3.png",
+        "assets/images/rawaq4.png",
+        "assets/images/rawaq5.png"
+      ];
+      let currentRawaqIndex = 0;
+
+      // 2. صور معصم الحاج
+      const hajjImages = [
+        "assets/images/hajj1.jpg", 
+        "assets/images/hajj2.jpg", 
+        "assets/images/hajj3.jpg"  
+      ];
+      let currentHajjIndex = 0;
+
+      // 3. صور الطاولة الذكية
+      const tableImages = [
+        "assets/images/table1.jpg",
+        "assets/images/table2.jpg",
+        "assets/images/table3.jpg",
+        "assets/images/table4.jpg"
+      ];
+      let currentTableIndex = 0;
+
+      window.activeGallery = "rawaq";
+
+      function openRawaqGallery(index) {
+        window.activeGallery = "rawaq";
+        currentRawaqIndex = index;
+        const modal = document.getElementById("rawaqLightbox");
+        const img = document.getElementById("rawaqImg");
+        img.src = rawaqImages[currentRawaqIndex];
+        modal.style.display = "flex";
+      }
+
+      function openHajjGallery(index) {
+        window.activeGallery = "hajj";
+        currentHajjIndex = index;
+        const modal = document.getElementById("rawaqLightbox");
+        const img = document.getElementById("rawaqImg");
+        img.src = hajjImages[currentHajjIndex];
+        modal.style.display = "flex";
+      }
+
+      function openTableGallery(index) {
+        window.activeGallery = "table";
+        currentTableIndex = index;
+        const modal = document.getElementById("rawaqLightbox");
+        const img = document.getElementById("rawaqImg");
+        img.src = tableImages[currentTableIndex];
+        modal.style.display = "flex";
+      }
+
+      function closeRawaqGallery() {
+        document.getElementById("rawaqLightbox").style.display = "none";
+      }
+
+      function changeRawaqImage(step) {
+        if (window.activeGallery === "hajj") {
+          currentHajjIndex += step;
+          if (currentHajjIndex < 0) {
+            currentHajjIndex = hajjImages.length - 1;
+          } else if (currentHajjIndex >= hajjImages.length) {
+            currentHajjIndex = 0;
+          }
+          document.getElementById("rawaqImg").src = hajjImages[currentHajjIndex];
+        } else if (window.activeGallery === "table") {
+          currentTableIndex += step;
+          if (currentTableIndex < 0) {
+            currentTableIndex = tableImages.length - 1;
+          } else if (currentTableIndex >= tableImages.length) {
+            currentTableIndex = 0;
+          }
+          document.getElementById("rawaqImg").src = tableImages[currentTableIndex];
+        } else {
+          currentRawaqIndex += step;
+          if (currentRawaqIndex < 0) {
+            currentRawaqIndex = rawaqImages.length - 1;
+          } else if (currentRawaqIndex >= rawaqImages.length) {
+            currentRawaqIndex = 0;
+          }
+          document.getElementById("rawaqImg").src = rawaqImages[currentRawaqIndex];
+        }
+      }
+    </script>
+  </body>
+</html>
